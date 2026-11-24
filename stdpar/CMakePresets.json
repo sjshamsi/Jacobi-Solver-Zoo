@@ -1,0 +1,59 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24 },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": { "CMAKE_EXPORT_COMPILE_COMMANDS": "ON" }
+    },
+
+    { "name": "REL",  "inherits": "base", "displayName": "Base (Release)",  "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" } },
+    { "name": "DEV",  "inherits": "base", "displayName": "Base (Dev)",      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" } },
+
+
+    { "name": "TBB_REL",  "inherits": "REL",  "displayName":  "TBB (Release)",  "cacheVariables": { "BACKEND": "TBB" } },
+    { "name": "TBB_DEV",  "inherits": "DEV",  "displayName":  "TBB (Dev)",      "cacheVariables": { "BACKEND": "TBB" } },
+
+    { "name": "OMP_REL",  "inherits": "REL",  "displayName":  "OpenMP (Release)", "cacheVariables": { "BACKEND": "OpenMP" } },
+    { "name": "OMP_DEV",  "inherits": "DEV",  "displayName":  "OpenMP (Dev)",     "cacheVariables": { "BACKEND": "OpenMP" } },
+
+    {
+      "name": "NV_REL",
+      "inherits": "REL",
+      "displayName": "NVHPC (Release)",
+      "cacheVariables": { "BACKEND": "NVCXX" },
+      "environment": {
+        "CXX": "nvc++",
+        "CC":  "nvc"
+      }
+    },
+    
+    {
+      "name": "NV_DEV",
+      "inherits": "DEV",
+      "displayName": "NVCXX (Dev)",
+      "cacheVariables": { "BACKEND": "NVCXX" },
+      "environment": {
+        "CXX": "nvc++",
+        "CC":  "nvc"
+      }
+    },
+
+    { "name": "NVGPU_REL", "inherits": "NV_REL", "displayName": "NVHPC GPU (Release)",  "cacheVariables": { "NVCXX_GPU_COMPILE": "ON" } },
+    { "name": "NVGPU_DEV", "inherits": "NV_DEV", "displayName": "NVHPC GPU (Dev)",      "cacheVariables": { "NVCXX_GPU_COMPILE": "ON" } }
+  ],
+
+  "buildPresets": [
+    { "name": "TBB_DEV",    "configurePreset": "TBB_DEV" },
+    { "name": "TBB_REL",    "configurePreset": "TBB_REL" },
+    { "name": "OMP_DEV",    "configurePreset": "OMP_DEV" },
+    { "name": "OMP_REL",    "configurePreset": "OMP_REL" },
+    { "name": "NV_DEV",     "configurePreset": "NV_DEV" },
+    { "name": "NV_REL",     "configurePreset": "NV_REL" },
+    { "name": "NVGPU_REL",  "configurePreset": "NVGPU_REL" },
+    { "name": "NVGPU_DEV",  "configurePreset": "NVGPU_DEV" }
+  ]
+}

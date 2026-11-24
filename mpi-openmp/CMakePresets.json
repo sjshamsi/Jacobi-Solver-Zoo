@@ -1,0 +1,21 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": { "major": 3, "minor": 27 },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {  "CMAKE_EXPORT_COMPILE_COMMANDS": "ON", "CMAKE_C_COMPILER": "mpicc", "CMAKE_CXX_COMPILER": "mpicxx"}
+    },
+
+    { "name": "REL",  "inherits": "base", "displayName": "Base (Release)",  "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" } },
+    { "name": "DEV",  "inherits": "base", "displayName": "Base (Dev)",      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" } }
+  ],
+
+  "buildPresets": [
+    { "name": "REL",      "configurePreset": "REL" },
+    { "name": "DEV",      "configurePreset": "DEV" }
+  ]
+}

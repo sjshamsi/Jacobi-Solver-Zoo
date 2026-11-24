@@ -1,0 +1,32 @@
+# 2 CPUs, Parallel Jacobi 5000x5000 10000 iterations 1 loops: 248654 ms total in 1 calls (avg 248654 ms)
+248654, 1, 248654, 5000, 10000
+# 3 CPUs, Parallel Jacobi 5000x5000 10000 iterations 1 loops: 190233 ms total in 1 calls (avg 190233 ms)
+190233, 1, 190233, 5000, 10000
+# 4 CPUs, Parallel Jacobi 5000x5000 10000 iterations 1 loops: 164710 ms total in 1 calls (avg 164710 ms)
+164710, 1, 164710, 5000, 10000
+# 5 CPUs, Parallel Jacobi 5000x5000 10000 iterations 1 loops: 155644 ms total in 1 calls (avg 155644 ms)
+155644, 1, 155644, 5000, 10000
+# 6 CPUs, Parallel Jacobi 5000x5000 10000 iterations 1 loops: 146353 ms total in 1 calls (avg 146353 ms)
+146353, 1, 146353, 5000, 10000
+# 7 CPUs, Parallel Jacobi 5000x5000 10000 iterations 1 loops: 133795 ms total in 1 calls (avg 133795 ms)
+133795, 1, 133795, 5000, 10000
+# 8 CPUs, Parallel Jacobi 5000x5000 10000 iterations 1 loops: 130629 ms total in 1 calls (avg 130629 ms)
+130629, 1, 130629, 5000, 10000
+# 10 CPUs, # 2 CPUs, P. Jacobi 5000x5000, 1000 iters: 24407.8 ms total in 1 calls (avg 24407.8 ms)
+24407.8, 1, 24407.8, 5000, 1000
+# 4 CPUs, P. Jacobi 5000x5000, 1000 iters: 16983.5 ms total in 1 calls (avg 16983.5 ms)
+16983.5, 1, 16983.5, 5000, 1000
+# 8 CPUs, P. Jacobi 5000x5000, 1000 iters: 13235.9 ms total in 1 calls (avg 13235.9 ms)
+13235.9, 1, 13235.9, 5000, 1000
+# 12 CPUs, P. Jacobi 5000x5000, 1000 iters: 12140.5 ms total in 1 calls (avg 12140.5 ms)
+12140.5, 1, 12140.5, 5000, 1000
+# 16 CPUs, P. Jacobi 5000x5000, 1000 iters: 11667.4 ms total in 1 calls (avg 11667.4 ms)
+11667.4, 1, 11667.4, 5000, 1000
+# 24 CPUs, P. Jacobi 5000x5000, 1000 iters: 12384.3 ms total in 1 calls (avg 12384.3 ms)
+12384.3, 1, 12384.3, 5000, 1000
+# 36 CPUs, P. Jacobi 5000x5000, 1000 iters: 17488.6 ms total in 1 calls (avg 17488.6 ms)
+17488.6, 1, 17488.6, 5000, 1000
+# 48 CPUs, P. Jacobi 5000x5000, 1000 iters: 13332.6 ms total in 1 calls (avg 13332.6 ms)
+13332.6, 1, 13332.6, 5000, 1000
+# 64 CPUs, P. Jacobi 5000x5000, 1000 iters: 13176.8 ms total in 1 calls (avg 13176.8 ms)
+13176.8, 1, 13176.8, 5000, 1000

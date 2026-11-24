@@ -1,0 +1,21 @@
+# builds
+build/
+bin/
+*.x
+*.o
+
+# run outputs
+log.txt
+Mesh_Iters_*/
+data/
+*.h5
+*.nc
+*.nsys-rep
+*.sqlite
+*.out
+*.err
+*.slurm
+!python/job.slurm
+/stdpar/jacobi.gif
+
+__pycache__/
